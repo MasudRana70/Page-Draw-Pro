@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "PDP - Page Draw",
+  "version": "1.0.1",
+  "description": "Minimalist on-page drawing tool with area selection, static 4-pen palette, and eraser.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Toggle PDP Drawing"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "toggle-pdp": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "Toggle PDP Draw"
+    }
+  }
+}

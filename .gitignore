@@ -1,0 +1,15 @@
+# Zipped extensions
+*.zip
+
+# Operating system files
+Thumbs.db
+.DS_Store
+ehthumbs.db
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Node / package manager files (if you use them later)
+node_modules/
+*.log
